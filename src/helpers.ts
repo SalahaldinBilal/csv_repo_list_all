@@ -34,3 +34,14 @@ export async function listAllCsvFiles(): Promise<CsvFileData[]> {
 
   return files;
 }
+
+export function response(statusCode: number, body: any, extraHeaders: { [key: string]: string } = {}) {
+  return {
+    statusCode,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      ...extraHeaders
+    },
+    body
+  }
+}
