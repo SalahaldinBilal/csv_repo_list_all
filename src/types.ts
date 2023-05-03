@@ -12,5 +12,6 @@ declare global {
 export type CsvFileData = {
   name: string,
   lastUpdate: string,
-  size: number
+  size: number,
+  hasDynamoTable: boolean
 };
